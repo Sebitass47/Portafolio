@@ -1,0 +1,19 @@
+{% extends 'web/layout.html' %}
+{% load static %} 
+
+{% block styles%}
+<link rel="stylesheet" href="{% static 'web/main.css' %}">
+{% endblock %}
+{% block body %}
+    <body>
+        <header>
+            <div class="title-container">
+                <h1 class="title">Sebastián Martínez de la Rosa</h1>
+                <p>Web Developer</p>
+            </div>
+            <div class="spaceman-container">
+                <img src="{% static 'web/AstronautaHD.png' %}" alt="Astronauta" class="spaceman">
+            </div>
+        </header>
+    </body>
+{% endblock %}

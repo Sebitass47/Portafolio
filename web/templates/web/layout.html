@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastián de la Rosa</title>
+    <link rel="stylesheet" href="{% static 'web/layout.css' %}">
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+
+    <footer>
+        <div class="footer-container">
+            <p>Diseñado y contruido por Sebastián Martínez de la Rosa</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -2,18 +2,168 @@
 {% load static %} 
 
 {% block styles%}
-<link rel="stylesheet" href="{% static 'web/main.css' %}">
+<link rel="stylesheet" href="{% static 'web/css/header.css' %}">
+<link rel="stylesheet" href="{% static 'web/css/about.css' %}">
+<link rel="stylesheet" href="{% static 'web/css/projects.css' %}">
+<link rel="stylesheet" href="{% static 'web/css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'web/css/keyframes.css' %}">
 {% endblock %}
 {% block body %}
     <body>
         <header>
             <div class="title-container">
                 <h1 class="title">Sebastián Martínez de la Rosa</h1>
-                <p>Web Developer</p>
+                <p class="slogan">Web Developer</p>
             </div>
             <div class="spaceman-container">
-                <img src="{% static 'web/AstronautaHD.png' %}" alt="Astronauta" class="spaceman">
+                <img src="{% static 'web/img/AstronautaHD.png' %}" alt="Astronauta" class="spaceman">
             </div>
         </header>
+        <section class="about">
+            <div class="about-container">
+                <h2 class="about-title">About Me</h2>
+                <p class="about-text">
+                    Hi! I'm Sebastián Martínez de la Rosa.
+                    I started programming when the pandemic started, and it was thanks to a class I had at 
+                    university that I discovered this world, since then, all I want to do is keep learning 
+                    and discovering new technologies.
+                </p>
+
+                <p class="about-text">
+                    I started with basic Python courses, and over time I began to learn about the different 
+                    areas in which I could specialize, I chose web development.
+                </p>
+
+                <p class="about-text">
+                    My first framework was Flask, and with it I learned a bit of HTML and CSS. But I felt that 
+                    my knowledge was very limited, so I continued studying until I found the different courses 
+                    that Harvard offers, the first one I took was to learn the fundamentals of programming, and 
+                    the second was focused on web development with Django, SQL, Javascript, HTML and CSS.
+                </p>
+
+                <p class="about-text">
+                    I have done several projects, many related to the courses, but others are real projects, the 
+                    most recent is a promotion page for a school. Now I'm working on something bigger, an 
+                    "encyclopedia for programmers".
+                </p>
+
+                <p class="about-text">
+                    Here are a few technologies I’ve been working with recently:
+                </p>
+
+                <ul class="about-list">
+                        <li>Python (Django, Flask)</li>
+                        <li>JavaScript (React)</li>
+                        <li>SQL (MySQL, SQLite)</li>
+                        <li>HTML5</li>
+                        <li>CSS3 (Bootstrap, Tailwind)</li>
+                        <li>Git (Github)</li>
+                        <li>Linux (Ubuntu)</li>
+                        <li>Nginx</li>
+                        <li>Gunicorn</li>
+                </ul>  
+            </div>
+
+            <div class="about-img">
+                <img src="{% static 'web/img/personal.jpg' %}" alt="Sebastián photo" class="me">
+                <a  class="pdf" href="{% static 'web/Curriculum.pdf' %}" download="SebastiánMartínezCV">RESUME</a>
+            </div>
+            
+        </section>
+
+        <section class="projects-section">
+            <div class="projects-title">
+                <h1>My Projects</h1>
+            </div>
+            
+            <div class="projects">
+                {% for project in projects%}
+                <div class="project">
+                    <div class="img-container">
+                        <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-img">
+                    </div>
+
+                    <div class="project-info">
+
+                        <h3 class="project-title">{{ project.title }}</h3>
+
+                        <p class="project-text">{{ project.description }}</p>
+
+                        <div class="project-extra">
+
+                            <p class="project-tech">{{ project.technologies }}</p>
+
+                            
+                            <div class="project-links">
+                                {% if project.github_url %}
+                                <a href="{{ project.github_url }}" target="_blank" class="project-link"><i class='bx bxl-github'></i></a>
+                                {% endif %}
+
+                                {% if project.video_url %}
+                                <a href="{{ project.video_url }}" target="_blank" class="project-link"><i class='bx bxl-youtube' ></i></a>
+                                {% endif %}
+
+                                {% if project.live_url %}
+                                <a href="{{ project.live_url }}" target="_blank" class="project-link"><i class='bx bx-link-external'></i></a>
+                                {% endif %}
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </section>
+
+        <section class="contact-section">
+            <div class="form">
+                <form id="form">
+                    <legend><h2>Contact Me</h2></legend>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Your name please" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="A contact email"  required>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" id="subject" placeholder="Enter subject"/  required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-textarea" id="message"  required onfocus="clean()">How I can help?</textarea>
+                    </div>
+
+                    <button type="submit" class="button-submit">
+                        <div class="svg-wrapper-1">
+                          <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                              <path fill="none" d="M0 0h24v24H0z"></path>
+                              <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <span>Send</span>
+                      </button>
+                      
+                </form>
+                
+            </div>
+        <div id="alert_green" class="alert-green">
+            <h3 class="alert-message">Message sent succesfully!</h3>
+        </div>
+
+        <div id="alert_red" class="alert-red">
+            <h3 class="alert-message">The message could not be sent</h3>
+        </div>
+
+        </section>
     </body>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'web/js/main.js' %}"></script>
 {% endblock %}

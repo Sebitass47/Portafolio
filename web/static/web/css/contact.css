@@ -1,0 +1,164 @@
+.contact-section{
+   max-height: 700px;
+    margin: 150px auto auto auto;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1900' height='800' preserveAspectRatio='none' viewBox='0 0 1900 800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1023%26quot%3b)' fill='none'%3e%3crect width='1900' height='800' x='0' y='0' fill='rgba(15%2c 22%2c 30%2c 1)'%3e%3c/rect%3e%3cpath d='M0 0L456.42 0L0 142.24z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 142.24L456.42 0L1007.6600000000001 0L0 169.93z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 169.93L1007.6600000000001 0L1530.69 0L0 364.76z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 364.76L1530.69 0L1706.19 0L0 409.8z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1900 800L1196.83 800L1900 628.59z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1900 628.59L1196.83 800L1132.73 800L1900 528.21z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1900 528.21L1132.73 800L882.61 800L1900 509.02000000000004z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1900 509.02000000000004L882.61 800L612.05 800L1900 507.35z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1023'%3e%3crect width='1900' height='800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 600px;
+    background-color: #ff013c;
+    text-align: center;
+    padding: 20px;
+    border: 0;
+    margin-top: 150px; 
+}
+
+.form-control{
+    font-size: 1.1rem;
+    padding: 5px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0,0,0,0.2);;
+    border-width: 0;
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control::placeholder{
+    color: rgba(255,255,255,0.8);
+}
+
+.form-textarea{
+    font-family: 'Hind Madurai', sans-serif;
+    width: 100%;
+    height: 100px;
+    font-size: 1.1rem;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.2);;
+    color: rgba(255,255,255,0.8);
+    border-width: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+    margin-bottom: 25px;
+}
+
+.button-submit{
+    margin: auto;
+        font-family: inherit;
+        font-size: 20px;
+        background: #00e6f6;
+        color: rgba(255,255,255,0.8);;
+        padding: 0.7em 1em;
+        padding-left: 0.9em;
+        display: flex;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.2s;
+       }
+       
+       .button-submit span {
+        display: block;
+        margin-left: 0.3em;
+        transition: all 0.3s ease-in-out;
+       }
+       
+       .button-submit svg {
+        display: block;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+       }
+       
+       .button-submit:hover .svg-wrapper {
+        animation: fly-1 0.6s ease-in-out infinite alternate;
+       }
+       
+       .button-submit:hover svg {
+        transform: translateX(1.2em) rotate(45deg) scale(1.1);
+       }
+       
+       .button-submit:hover span {
+        transform: translateX(5em);
+       }
+       
+       .button-submit:active {
+        transform: scale(0.95);
+       }
+       
+       @keyframes fly-1 {
+        from {
+         transform: translateY(0.1em);
+        }
+       
+        to {
+         transform: translateY(-0.1em);
+        }
+       }
+       
+
+.alert-green{
+    position: fixed;
+    width: 300px;
+    right: 2rem;
+    bottom: 5rem;
+    text-align: center;
+    background-color: rgb(46, 189, 46);
+    border-radius: 20px;
+    animation: alert 0.5s linear;
+  
+}
+
+.alert-red{
+    position: fixed;
+    width: 300px;
+    right: 2rem;
+    bottom: 5rem;
+    text-align: center;
+    background-color: rgb(245, 30, 30);
+    border-radius: 20px;
+    animation: alert 1s linear;
+}
+
+@media screen and (max-width: 1080px){
+
+    .form{
+        width: 550px;
+        margin: 0 auto;
+        background-color: #ff013c;
+        text-align: center;
+        padding: 20px;
+        border: 0;
+        margin: 50px auto;
+    }
+    
+
+}
+
+@media screen and (max-width: 700px){
+
+    .form{
+        width:100%;
+        padding: 10px;
+        background-color: #ff013c;
+        text-align: center;
+        padding: 20px;
+        border: 0;
+        margin: 50px auto;
+    } 
+    
+
+}
+
+
+
+    

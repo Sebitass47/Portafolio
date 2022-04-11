@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&family=Lora:ital@1&family=Montserrat:wght@700&display=swap');
+
+body{
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 400;
+    color: rgb(245, 245, 245);
+    background-color: #0F161E;
+    width: 100%;
+    margin: 10px auto;
+    
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+ 
+
+.home_social{
+    position: fixed;
+    bottom: 3rem;
+    left: 2rem;
+    display: grid;
+    row-gap: .75rem;
+}
+
+.home_social-link{
+    width: max-content;
+    padding: .25rem;
+    display: flex;
+    font-size: 1.3rem;
+    transition: .4s;
+    color:rgb(245, 245, 245)
+}
+
+.home_social-link:hover{
+    color: #FF013C;
+
+}
+
+.home_social::after{
+    content: '';
+    width: 32px;
+    height: 2px;
+    transform: rotate(90deg) 
+}
+
+
+.footer-container{
+    display:flex;
+    height: 150px;
+    justify-content:  center;
+    align-items: center;
+}
+
+.footer{
+    background: rgb(23, 252, 146);
+    background: linear-gradient(93deg, rgba(23, 252, 146, 1) 0%, rgba(41, 90, 132, 1) 25%, rgba(113, 24, 91, 1) 40%, rgba(255, 109, 114, 1) 60%, rgba(244, 195, 7, 1) 75%, rgba(23, 252, 146, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300%;
+    animation: color 5s linear infinite;
+    margin: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+    .home_social{
+        position: absolute;
+        bottom: 3rem;
+        left: 2rem;
+        display: grid;
+        row-gap: .75rem;
+    }
+}
+
+.footer-container{
+    display:flex;
+    justify-content:  center;
+    align-items: center;
+}
+

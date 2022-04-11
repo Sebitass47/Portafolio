@@ -1,0 +1,83 @@
+header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.title {
+    font-size: 5rem;
+    background: rgb(23, 252, 146);
+    background: linear-gradient(93deg, rgba(23, 252, 146, 1) 0%, rgba(41, 90, 132, 1) 25%, rgba(113, 24, 91, 1) 40%, rgba(255, 109, 114, 1) 60%, rgba(244, 195, 7, 1) 75%, rgba(23, 252, 146, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300%;
+    animation: color 5s linear infinite;
+    margin: 0;
+}
+
+.title-container {
+    height: 100%;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.slogan {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+}
+
+.spaceman-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 500px;
+    overflow: hidden;
+
+}
+
+.spaceman {
+    height: 100%;
+    animation: movement 15s linear infinite;
+}
+
+@media screen and (max-width: 1080px) {
+    header {
+        height: 100vh;
+        width: 100%;
+        display: block;
+       
+    
+    }
+
+    .title {
+        font-size: 5rem;
+    }
+
+    .title-container {
+        margin:auto;
+        width: 80%;
+    }
+
+    .spaceman-container {
+        width: 300px;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+}
+    
+
+    

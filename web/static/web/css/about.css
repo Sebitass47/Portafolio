@@ -1,0 +1,149 @@
+.about {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2000' height='750' preserveAspectRatio='none' viewBox='0 0 2000 750'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1019%26quot%3b)' fill='none'%3e%3crect width='2000' height='750' x='0' y='0' fill='rgba(15%2c 22%2c 30%2c 1)'%3e%3c/rect%3e%3cpath d='M -730.0742066803534%2c439 C -596.67%2c397.2 -329.87%2c187.2 -63.074206680353484%2c230 C 203.73%2c272.8 337.13%2c642.6 603.9257933196466%2c653 C 870.73%2c663.4 1004.13%2c293.6 1270.9257933196466%2c282 C 1537.73%2c270.4 1792.11%2c611 1937.9257933196466%2c595 C 2083.74%2c579 1987.59%2c280.6 2000%2c202' stroke='rgba(219%2c 22%2c 22%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -1168.8663735604257%2c513 C -1035.47%2c472.4 -768.67%2c309 -501.86637356042576%2c310 C -235.07%2c311 -101.67%2c545 165.13362643957424%2c518 C 431.93%2c491 565.33%2c164.6 832.1336264395743%2c175 C 1098.93%2c185.4 1265.56%2c546 1499.1336264395743%2c570 C 1732.71%2c594 1899.83%2c350 2000%2c295' stroke='rgba(219%2c 22%2c 22%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -339.1547381301611%2c218 C -205.75%2c260.2 61.05%2c437.2 327.8452618698389%2c429 C 594.65%2c420.8 728.05%2c149.2 994.8452618698389%2c177 C 1261.65%2c204.8 1395.05%2c588.2 1661.8452618698389%2c568 C 1928.65%2c547.8 2261.21%2c114.2 2328.845261869839%2c76 C 2396.48%2c37.8 2065.77%2c316.8 2000%2c377' stroke='rgba(219%2c 22%2c 22%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -262.95704728841235%2c506 C -129.56%2c466.2 137.24%2c278.2 404.04295271158765%2c307 C 670.84%2c335.8 804.24%2c639.4 1071.0429527115875%2c650 C 1337.84%2c660.6 1471.24%2c399.6 1738.0429527115875%2c360 C 2004.84%2c320.4 2352.65%2c475.2 2405.0429527115875%2c452 C 2457.43%2c428.8 2081.01%2c285.6 2000%2c244' stroke='rgba(219%2c 22%2c 22%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1019'%3e%3crect width='2000' height='750' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");    margin: 10px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about-text {
+    width: 600px;
+    padding: 10px;
+    height: 100%;
+    line-height: 1.1;
+    font-size: 1.1rem;
+}
+
+.about-list{
+    font-size: 1.1rem;
+    list-style-type: circle;
+    columns: 2; 
+}
+
+.about-title {
+    margin-top: 0;
+}
+
+.about-img {
+    margin-top: 65px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.about-img img {
+    object-fit: cover;
+    height: 100%;
+
+}
+
+.pdf{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #0F161E;
+    cursor: pointer;
+    background-color: #00e6f6;
+    border: 3px solid #00e6f6;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px #ff013c, 2px 2px 0px 0px #ff013c, 3px 3px 0px 0px #ff013c, 4px 4px 0px 0px #ff013c, 5px 5px 0px 0px #ff013c;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.pdf:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.about-img img {
+    padding: 16px 20px;
+    background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+    border: 0;
+    box-shadow: 6px 0px 0px #00e6f6;
+    position: relative;
+}
+
+@media screen and (max-width: 1080px) {
+    .about-text {
+        width: 400px;
+    }
+}
+    
+@media screen and (max-width: 850px) {
+    .about-text {
+        margin: auto;
+        width: 90%;
+        
+    }
+
+    .about {
+        width: 90%;
+        background-color: #0F161E;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        
+    }
+
+    .about-list{
+        font-size: 1.1rem;
+        list-style-type: circle;
+        columns: 2; 
+        
+    }
+
+    .about-title {
+        margin: 0 10px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 650px) {
+    .about-text {
+        width: 90%;
+    }
+
+    .about {
+        width: 90%;
+        background-color: #0F161E;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        
+    }
+
+    .about-list{
+        font-size: 1.1rem;
+        list-style-type: circle;
+        columns: 2; 
+        
+    }
+
+    .about-title {
+        margin: 0 10px;
+    }
+    
+    .about-img {
+        margin-top: 65px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    
+}
+    

@@ -6,18 +6,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color"  content="#036BA9">
+    <meta name="description" content="Desarrollador Web con conocimiento en Django, React, JavaScript, Python, SQL, HTML5, CSS3." />
+    <link rel="icon" href="{% static 'IconoRojo64.ico' %}" sizes="60x60" />
     <title>Sebastián de la Rosa</title>
-    <link rel="stylesheet" href="{% static 'web/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/layout.css' %}">
     {% block styles %}
     {% endblock %}
+    {% block script %}
+    {% endblock %}
+    <script src="{% static 'web/js/principal.js' %}"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    {% block body %}
-    {% endblock %}
+    <div class="home_social">
+        <a href="https://github.com/Sebitass47" target="_blank" class="home_social-link">
+            <i class='bx bxl-github'></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sebasti%C3%A1n-mart%C3%ADnez-de-la-rosa-149243237/" target="_blank" class="home_social-link">
+            <i class='bx bxl-linkedin' ></i>
+        </a>
+        
+        <a href="https://www.youtube.com/channel/UCQdL9xktiTa0Oc3VAe2OLSQ" target="_blank" class="home_social-link">
+            <i class='bx bxl-youtube' ></i>
+        </a>
+
+    </div>
+    </div>
+    <div class="container">
+        {% block body %}
+        {% endblock %}
+    </div>
+    
 
     <footer>
         <div class="footer-container">
-            <p>Diseñado y contruido por Sebastián Martínez de la Rosa</p>
+            <span class="home_contact-name"><h3>Built by <span class="footer" onclick="up()">Sebastián Martínez de la Rosa</span></h3></p>
         </div>
     </footer>
 </body>

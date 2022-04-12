@@ -65,7 +65,7 @@
             </div>
 
             <div class="about-img">
-                <img src="{% static 'web/img/personal.jpg' %}" alt="Sebastián photo" class="me">
+                <img src="{% static 'web/img/personal.jpg' %}" alt="Sebastián photo" class="me animado">
                 <a  class="pdf" href="{% static 'web/Curriculum.pdf' %}" download="SebastiánMartínezCV">RESUME</a>
             </div>
             
@@ -78,7 +78,7 @@
             
             <div class="projects">
                 {% for project in projects%}
-                <div class="project">
+                <div class="project animado">
                     <div class="img-container">
                         <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-img">
                     </div>

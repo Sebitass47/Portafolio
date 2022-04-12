@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color"  content="#036BA9">
     <meta name="description" content="Desarrollador Web con conocimiento en Django, React, JavaScript, Python, SQL, HTML5, CSS3." />
-    <link rel="icon" href="{% static 'IconoRojo64.ico' %}" sizes="60x60" />
+    <link rel="icon" href="{% static 'logo.ico' %}" sizes="60x60" />
+    <link rel="apple-touch-icon" sizes="60*60" href="{% static 'logo.ico' %}">
     <title>Sebastián de la Rosa</title>
     <link rel="stylesheet" href="{% static 'web/css/layout.css' %}">
     {% block styles %}
@@ -17,6 +18,9 @@
     {% endblock %}
     <script src="{% static 'web/js/principal.js' %}"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="theme-color"  content="#FF013C">
+    <meta name="description" content="Web developer en CDMX con conocimientos en Django, JavaScript, React, HTML5, CSS3. Apasionado con aprender y dar lo mejor de si mismo todos los días" />
+    <link rel="manifest" href="{% static 'web/js/manifest.json'%}" />
 </head>
 <body>
     <div class="home_social">

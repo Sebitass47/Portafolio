@@ -21,34 +21,33 @@
         </header>
         <section class="about">
             <div class="about-container">
-                <h2 class="about-title">About Me</h2>
+                <h2 class="about-title">Acerca de mi</h2>
                 <p class="about-text">
-                    Hi! I'm Sebastián Martínez de la Rosa.
-                    I started programming when the pandemic started, and it was thanks to a class I had at 
-                    university that I discovered this world, since then, all I want to do is keep learning 
-                    and discovering new technologies.
+                    Hola!, Soy Sebastián Martínez de la Rosa. Empecé a programar cuando la pandemia empezó, 
+                    y fue gracias a una clase que tuve en la universidad que descubrí este mundo, desde entonces, 
+                    lo único que quiero hacer es seguir aprendiendo y descubriendo nuevas tecnologías.
                 </p>
 
                 <p class="about-text">
-                    I started with basic Python courses, and over time I began to learn about the different 
-                    areas in which I could specialize, I chose web development.
+                    Empecé con cursos básicos de Python, y con el tiempo empecé a conocer las diferentes áreas en 
+                    las que me podía especializar, escogí desarrollo web.
                 </p>
 
                 <p class="about-text">
-                    My first framework was Flask, and with it I learned a bit of HTML and CSS. But I felt that 
-                    my knowledge was very limited, so I continued studying until I found the different courses 
-                    that Harvard offers, the first one I took was to learn the fundamentals of programming, and 
-                    the second was focused on web development with Django, SQL, Javascript, HTML and CSS.
+                    Mi primer framework fue Flask, y con el aprendí un poco de HTML y CSS. Pero sentía que mis 
+                    conocimientos era muy limitados, así que seguí estudiando hasta que encontré los diferentes 
+                    cursos que ofrece Harvard, el primero que curse fue para aprender los fundamentos de la programación, 
+                    y el segundo fue enfocado al desarrollo web con Django, SQL, Javascript, HTML and CSS.
                 </p>
 
                 <p class="about-text">
-                    I have done several projects, many related to the courses, but others are real projects, the 
-                    most recent is a promotion page for a school. Now I'm working on something bigger, an 
-                    "encyclopedia for programmers".
+                    He realizado varios projectos, muchos relacionados con los cursos, pero otros son proyectos reales, 
+                    el más reciente es una página de promoción para una escuela. Ahora estoy trabajando en algo más grande, 
+                    una "enciclopedia para programadores".
                 </p>
 
                 <p class="about-text">
-                    Here are a few technologies I’ve been working with recently:
+                    Aquí hay algunas tecnologías con las que he estado trabajando recientemente:
                 </p>
 
                 <ul class="about-list">
@@ -66,14 +65,14 @@
 
             <div class="about-img">
                 <img src="{% static 'web/img/personal.jpg' %}" alt="Sebastián photo" class="me animado">
-                <a  class="pdf" href="{% static 'web/Curriculum.pdf' %}" download="SebastiánMartínezCV">RESUME</a>
+                <a  class="pdf" href="{% static 'web/Curriculum.pdf' %}" download="SebastiánMartínezCV">Curriculum</a>
             </div>
             
         </section>
 
         <section class="projects-section">
             <div class="projects-title">
-                <h1>My Projects</h1>
+                <h1>Mis proyectos</h1>
             </div>
             
             <div class="projects">
@@ -120,21 +119,21 @@
         <section class="contact-section">
             <div class="form">
                 <form id="form">
-                    <legend><h2>Contact Me</h2></legend>
+                    <legend><h2>Contáctame</h2></legend>
                     {% csrf_token %}
                     <div class="form-group">
-                        <input type="text" class="form-control" id="name" placeholder="Your name please" required>
+                        <input type="text" class="form-control" id="name" placeholder="Escribe tu nombre" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="A contact email"  required>
-                    </div>
-
-                    <div class="form-group">
-                        <input class="form-control" id="subject" placeholder="Enter subject"/  required>
+                        <input type="email" class="form-control" id="email" placeholder="Correo electrónico"  required>
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-textarea" id="message" maxlength="500" required onfocus="clean()">How I can help?</textarea>
+                        <input class="form-control" id="subject" placeholder="Asunto"  required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-textarea" id="message" maxlength="500" required onfocus="clean()">¿Cómo te puedo ayudar?</textarea>
                     </div>
 
                     <button type="submit" class="button-submit">
@@ -146,18 +145,18 @@
                             </svg>
                           </div>
                         </div>
-                        <span>Send</span>
+                        <span>Enviar</span>
                       </button>
                       
                 </form>
                 
             </div>
         <div id="alert_green" class="alert-green">
-            <h3 class="alert-message">Message sent succesfully!</h3>
+            <h3 class="alert-message">El mensaje se envio satisfactoriamente.</h3>
         </div>
 
         <div id="alert_red" class="alert-red">
-            <h3 class="alert-message">The message could not be sent</h3>
+            <h3 class="alert-message">No se pudo enviar el mensaje.</h3>
         </div>
 
         </section>

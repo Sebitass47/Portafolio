@@ -31,21 +31,18 @@ def index(request):
         #funcion para comprobar que es un correo valido con expresion regular
         if es_correo_valido(email):
             # Si el correo es válido, se crea un nuevo objeto de tipo Contacto
-            try:  
+            try:
                 db = Contact(name = name, email = email, subject = subject, message = message)
                 db.save()
             except:
                 return JsonResponse({'error': 'Error saving data'}, status=402)
             # Se envía el correo
-            try:
-                send_mail(email, name, subject, message)
-            except:
-                return JsonResponse({'error': 'Error sending email'}, status=402)
 
-            return JsonResponse({"ok": "The mail is send."}, status=200)
+            return JsonResponse({"ok": "The message is send."}, status=200)
 
         else:
             return JsonResponse({"error": "The message could not be sent"}, status=400)
+
 
 
 
